@@ -48,6 +48,7 @@ def main(argv):
                     for p in root.find('drawing').find('schematic').find('parts'):
                         parts_writer.writerow({'library':p.get('library'), 'deviceset':p.get('deviceset'), 'device':p.get('device'), 'value': p.get('value')})
             except:
+                print("\n\nError\n\n")
                 pass
                 
 

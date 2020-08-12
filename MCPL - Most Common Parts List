@@ -1,0 +1,150 @@
+
+Resistors(0805, 0603)
+100OHM,-0603-1/10W-1%
+100K-1/10W-1%(0603),,++++++++++++++sprk/ada
+10KOHM,0603-1/10W-1%,10k +++++++++++++++++++++++++++++++sprk/ada
+1KOHM,0603-1/10W-1%,1k +++++++sprk/Ada
+1KOHM,0402-1/16W-1%,
+1MOHM,0603-1/4W-5%
+2.2KOHM,0603-1/10W-1% +++++ sprk/Ada
+2.2KOHM,0402T-1/16W-1%
+22OHM1/10W1%(0402/0603)
+22
+4.7KOHM,0603-1/10W-1%,4.7k +++++++ sprk/ada
+33OHM,-0603-1/10W-1% +++++++++sprk
+470OHM1/10W1%(0603)
+5.1KOHM,5.1KOHM-0603-1/10W-1%,5.1k ++++++sprk
+
+
+Resistor 4 packs
+10K
+100K
+
+Trimpot
+10K trim
+
+Cap Ceramic
+0.1uF,0603-25V- 5%,0.1uF ++++++++ - sprk/ada ++ (100nF)
+0.1UF,-0402-16V-10% +++ sprk
+0.01uF
+4.7uF,-0603-6.3V-(10%)
+0.22µF 
+10uF /16V ++ada
+10UF,0603-6.3V-20% +sprk
+15pF,-0603-50V-5%
+1.0UF,0603-16V-10%-X7R+++++++++++++++ sprk/ada
+33nF 0402-CAP
+1.0pF, 0402-CAP
+22pF++
+
+
+Cap Electrolytic 
+47uF/25V,6.3V,16v
+
+Tantlum caps
+3528,10uF - TR3B106K010C1000 or TPSB226K020T0600
+7343,100uF
+22uF-35v
+
+
+Headers
+1X5
+1X12
+1X8
+1X16
+1X3
+1X6
+
+
+Diodes
+1N4148
+SCHOTTKY (1A) (MBR054, MBR120) 
+BAT60J- 10 V General pupose Signal Schottky Diode 
+ZENER 3.6
+ZENER 5.1V MMSZ5231BT1G 
+
+
+FERRITE
+
+Inductor:
+10uH
+
+MOSFET:
+BSS138
+DMG2305
+DMG3415U
+
+Transistor:
+mmbt2222 NPN
+ULN2003A  (BJT) Transistor Array 7 NPN Darlington
+
+Regulators:
+MIC5225-3.3
+AP2112-3.3
+SPX3819-3.3
+MIC5225-5.0
+
+XTAL
+32.768KHZ,SMD-3.2X1.5,32.768kHz NX2012SA ++++ sprk/ada
+25MHz
+12mhz
+16MHz (CSTCE16M0V53-R0)
+8Mhz
+
+LED 0805
+RED,0603,RED +++++ sprk
+BLUE,0603,BLUE +++sprk
+RED
+ORANGE
+GREEN 0603/0805
+
+RGB
+WS2812B
+
+
+Switch
+SMT Tactile KMR2 SPST
+KMR421NG 
+
+MICROSD
+
+Connectors
+JST_PH_2PIN ++
+JST_PH_3PIN
+SMACONNECTOR uFL/SMA
+DC BARREL 2.1mm DC
+MOLEX 2P connector
+
+
+Chips:
+MCP73831. Single Cell, Li-Ion/Li-Polymer Charge Management Controller ++
+ATMEGA32U4
+ATMEGA328P-AU
+ATSAMD21G18_QFN
+ATSAMD09D14A
+ATSAMD21G
+ATTINY85-MU
+CP2104
+RFM69HCW
+2MB SPIFLASH_8PIN
+ESP32_WROOM32
+LIS3DH ST accel
+LMV358IDGKR dual opamp
+chip antenna - Johanson Technology Inc. 2450AT18B100E
+NRF51822_MODULE_MDBT40 + MDBT50 (https://www.raytac.com/product/ins.php?index_id=74)
+74HCT1G125GW - Buffer/Line Driver
+PAM8302A AUDIOAMP 
+SMD PTC - 6V 500mA Fuse - 
+efuse TPS2595 
+mic SPW2430HR5H-B
+LED APA102 ++++++ sprk/ada
+BME280 - humidity sensor
+CCS811 - air quality 
+ESP32-PICO-D4
+ESP-12E
+GSM_SIM800L
+DRV8833
+STM32F446 (more periph, faster freq)
+STM32F405 (more Flash, RAM)
+W5500 Ethernet
+FT232RL
