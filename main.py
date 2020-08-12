@@ -1,5 +1,5 @@
 import requests 
-import xml.etree.ElementTree as ET
+import lxml.etree as ET
 import json
 import re
 import csv
@@ -30,20 +30,25 @@ def main(argv):
         elif opt in ("-o", "--organization"):
             org = arg
 
-    for page in range(1,int(pages)+1):
-        print("Parsing page #"+str(page))
-        url = "https://api.github.com/search/code?q=org:"+org+"+extension:sch&per_page="+str(per_page)+"&sort=indexed&order=dsc&page="+ str(page)
-        data = json.loads(requests.get(url).text)
-        with open('parts.csv', 'w', newline='', encoding="utf-8") as csvfile:
-            fieldnames = ['library', 'deviceset', 'device', 'value']
-            parts_writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-            parts_writer.writeheader()
-            for e in data['items']:
-                link = e["html_url"].replace("https://github.com", "https://raw.githubusercontent.com").replace("/blob","")
-                print("Parsing ==>:"+link)
-                root = ET.fromstring(requests.get(link).text) 
-                for p in root.find('drawing').find('schematic').find('parts'):
-                    parts_writer.writerow({'library':p.get('library'), 'deviceset':p.get('deviceset'), 'device':p.get('device'), 'value': p.get('value')})
+    parser = ET.XMLParser(recover=True,  encoding='utf-8')
+
+    with open('parts.csv', 'w', newline='', encoding="utf-8") as csvfile:
+        fieldnames = ['library', 'deviceset', 'device', 'value']
+        parts_writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        parts_writer.writeheader()
+        for page in range(1,int(pages)+1):
+            try:
+                print("Parsing page #"+str(page))
+                url = "https://api.github.com/search/code?q=org:"+org+"+extension:sch&per_page="+str(per_page)+"&sort=indexed&order=dsc&page="+ str(page)
+                data = json.loads(requests.get(url).text)
+                for e in data['items']:
+                    link = e["html_url"].replace("https://github.com", "https://raw.githubusercontent.com").replace("/blob","")
+                    print("Parsing ==>:"+link)
+                    root = ET.fromstring(requests.get(link).text.encode('utf-8'), parser) 
+                    for p in root.find('drawing').find('schematic').find('parts'):
+                        parts_writer.writerow({'library':p.get('library'), 'deviceset':p.get('deviceset'), 'device':p.get('device'), 'value': p.get('value')})
+            except:
+                pass
                 
 
 if __name__ == "__main__":
