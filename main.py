@@ -21,7 +21,7 @@ def main(argv):
         print(opt)
         print(arg)
         if opt == '-h':
-            print ('main.py -pp <per_page> -p <p>')
+            print ('main.py -c <count_per_page> -p <page> -o <organization>')
             sys.exit()
         elif opt in ("-p", "--page"):
             pages = arg
